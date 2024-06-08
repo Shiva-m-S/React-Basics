@@ -13,10 +13,12 @@ function MyForm() {
       event.preventDefault();
       alert(inputs.username +' is '+inputs.age +' years old');
     }
-  
+    const style = {
+      color:'green'
+    }
     return (
       <form onSubmit={handleSubmit}>
-        <label>Enter your name:
+        <label style={style}>Enter your name:
         <input 
           type="text" 
           name="username" 
@@ -32,7 +34,9 @@ function MyForm() {
             onChange={handleChange}
           />
           </label>
-          <input type="submit" />
+          
+          <input style={{backgroundColor:'red'}} type="submit" />
+         
       </form>
     )
   }
